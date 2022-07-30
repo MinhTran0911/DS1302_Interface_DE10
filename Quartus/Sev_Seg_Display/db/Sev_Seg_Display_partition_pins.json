@@ -1,0 +1,253 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HEX[5][0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5][2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5][3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5][4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5][5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5][6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4][6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3][6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2][6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1][6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[0][6]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min[6]",
+					"strict" : false
+				},
+				{
+					"name" : "min[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

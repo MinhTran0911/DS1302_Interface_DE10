@@ -1,0 +1,26 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/CLK_div_50_manual/CLK_div_50_TB.mpf}
+# Loading project CLK_div_50_TB
+# Compile of CLK_div_50_tb.sv was successful.
+# Compile of CLK_div_50.sv failed with 3 errors.
+# 2 compiles, 1 failed with 3 errors.
+# Compile of CLK_div_50_tb.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.CLK_div_50_tb
+# vsim -gui work.CLK_div_50_tb 
+# Start time: 18:47:19 on May 18,2022
+# Loading sv_std.std
+# Loading work.CLK_div_50_tb
+# Loading work.CLK_div_50
+add wave -position insertpoint  \
+sim:/CLK_div_50_tb/clk_in \
+sim:/CLK_div_50_tb/clk_out
+run -all
+# ** Note: $finish    : C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/CLK_div_50_manual/CLK_div_50_tb.sv(27)
+#    Time: 2 us  Iteration: 0  Instance: /CLK_div_50_tb
+# 1
+# Break in Module CLK_div_50_tb at C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/CLK_div_50_manual/CLK_div_50_tb.sv line 27
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/CLK_div_50_manual/wave.do}
+# End time: 19:38:20 on May 18,2022, Elapsed time: 0:51:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,7 @@
+
+State Machine - |Time_Setting|state
+Name state.SET_HR state.SET_SEC state.SET_MIN state.IDLE 
+state.IDLE 0 0 0 0 
+state.SET_MIN 0 0 1 1 
+state.SET_SEC 0 1 0 1 
+state.SET_HR 1 0 0 1 

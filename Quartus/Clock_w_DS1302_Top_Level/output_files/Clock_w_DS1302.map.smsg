@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at DS1302_Controller.sv(15): object "IO" differs only in case from object "io" in the same scope File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/DS1302_Controller.sv Line: 15

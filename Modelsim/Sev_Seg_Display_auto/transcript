@@ -1,0 +1,32 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display_TB.mpf}
+# Loading project Sev_Seg_Display_TB
+vsim -gui work.Sev_Seg_Display_tb
+# vsim -gui work.Sev_Seg_Display_tb 
+# Start time: 07:13:40 on May 18,2022
+# Loading sv_std.std
+# Loading work.Sev_Seg_Display_tb
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Sev_Seg_Display_tb/in_hr \
+sim:/Sev_Seg_Display_tb/in_min \
+sim:/Sev_Seg_Display_tb/in_sec \
+{sim:/Sev_Seg_Display_tb/out_HEX[0]} \
+{sim:/Sev_Seg_Display_tb/out_HEX[1]} \
+{sim:/Sev_Seg_Display_tb/out_HEX[2]} \
+{sim:/Sev_Seg_Display_tb/out_HEX[3]} \
+{sim:/Sev_Seg_Display_tb/out_HEX[4]} \
+{sim:/Sev_Seg_Display_tb/out_HEX[5]}
+run -all
+# At 0 ns
+# << Simulation Started >>
+# At 180 ns
+# << Simulation Finished >>
+# With 0 Output Mismatch(es)
+# ** Note: $finish    : C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display_tb.sv(95)
+#    Time: 180 ns  Iteration: 0  Instance: /Sev_Seg_Display_tb
+# 1
+# Break in Module Sev_Seg_Display_tb at C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display_tb.sv line 95
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/wave.do}
+# End time: 07:15:09 on May 18,2022, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 0

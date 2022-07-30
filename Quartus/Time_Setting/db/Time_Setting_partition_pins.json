@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sec[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_en",
+					"strict" : false
+				},
+				{
+					"name" : "min_en",
+					"strict" : false
+				},
+				{
+					"name" : "sec_en",
+					"strict" : false
+				},
+				{
+					"name" : "ext_input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rstn",
+					"strict" : false
+				},
+				{
+					"name" : "ext_input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ext_input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ext_input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ext_input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ext_input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "set",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

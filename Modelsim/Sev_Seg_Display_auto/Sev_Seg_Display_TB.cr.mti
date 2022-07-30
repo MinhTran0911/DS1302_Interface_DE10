@@ -1,0 +1,15 @@
+{C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Sev_Seg_Display
+
+Top level modules:
+	Sev_Seg_Display
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Sev_Seg_Display_auto/Sev_Seg_Display_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Sev_Seg_Display_tb
+
+Top level modules:
+	Sev_Seg_Display_tb
+
+} {} {}}

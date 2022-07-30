@@ -1,0 +1,45 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/DS1302_Controller_manual/DS1302_Controller_TB.mpf}
+# Loading project DS1302_Controller_TB
+# Compile of DS1302_Controller_tb.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.DS1302_Controller_tb
+# vsim -gui work.DS1302_Controller_tb 
+# Start time: 18:53:39 on May 24,2022
+# Loading sv_std.std
+# Loading work.DS1302_Controller_tb
+# Loading work.DS1302_Controller
+run -all
+# At 0 us
+# << Simulation Started >>
+# At 3850 us
+# << Simulation Finished >>
+# ** Note: $finish    : C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/DS1302_Controller_manual/DS1302_Controller_tb.sv(88)
+#    Time: 3850 us  Iteration: 0  Instance: /DS1302_Controller_tb
+# 1
+# Break in Module DS1302_Controller_tb at C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/DS1302_Controller_manual/DS1302_Controller_tb.sv line 88
+add wave -position insertpoint  \
+sim:/DS1302_Controller_tb/clk1 \
+sim:/DS1302_Controller_tb/rstn \
+sim:/DS1302_Controller_tb/rd_btn \
+sim:/DS1302_Controller_tb/wr_btn \
+sim:/DS1302_Controller_tb/hr \
+sim:/DS1302_Controller_tb/min \
+sim:/DS1302_Controller_tb/sec \
+sim:/DS1302_Controller_tb/time_out \
+sim:/DS1302_Controller_tb/CE \
+sim:/DS1302_Controller_tb/SCLK \
+sim:/DS1302_Controller_tb/IO
+restart
+run -all
+# At 0 us
+# << Simulation Started >>
+# At 3850 us
+# << Simulation Finished >>
+# ** Note: $finish    : C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/DS1302_Controller_manual/DS1302_Controller_tb.sv(88)
+#    Time: 3850 us  Iteration: 0  Instance: /DS1302_Controller_tb
+# 1
+# Break in Module DS1302_Controller_tb at C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/DS1302_Controller_manual/DS1302_Controller_tb.sv line 88
+# End time: 18:54:40 on May 24,2022, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,185 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.0
+vCLK_div_50
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1653215299
+!i10b 1
+!s100 0lTB18AJXz1_NC1WLM71^3
+IU1^ZHC^64>FMzO8_=mneB1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 CLK_div_50_sv_unit
+S1
+Z3 dC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto
+w1653135612
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/CLK_div_50.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/CLK_div_50.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1653215299.000000
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/CLK_div_50.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/CLK_div_50.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@c@l@k_div_50
+vClock_w_DS1302
+R0
+R1
+!i10b 1
+!s100 VcoMXVzoGd`^Zh^<A<>WZ2
+I:3B:ZXHVei`X;[H;]`<@Z3
+R2
+!s105 Clock_w_DS1302_sv_unit
+S1
+R3
+w1653182120
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302.sv|
+!i113 1
+R6
+R7
+n@clock_w_@d@s1302
+vClock_w_DS1302_tb
+R0
+R1
+!i10b 1
+!s100 SI3]:TVY23Fgn9;F5hMXk1
+IKJe?loN3<:jUPgEmc4l6D1
+R2
+!s105 Clock_w_DS1302_tb_sv_unit
+S1
+R3
+w1653215293
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv|
+!i113 1
+R6
+R7
+n@clock_w_@d@s1302_tb
+vDec_2_BCD_Decoder
+R0
+R1
+!i10b 1
+!s100 L`;jKYEN1EHZ[PYjEM88i0
+I9N9?JLL=Dj8?C]`0Kj[kK0
+R2
+!s105 Dec_2_BCD_Decoder_sv_unit
+S1
+R3
+w1652334036
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Dec_2_BCD_Decoder.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Dec_2_BCD_Decoder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Dec_2_BCD_Decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Dec_2_BCD_Decoder.sv|
+!i113 1
+R6
+R7
+n@dec_2_@b@c@d_@decoder
+vDS1302_Controller
+R0
+R1
+!i10b 1
+!s100 SA@>KIHz5NaZAzzH_P_:;3
+IC92JB?09F=J:lUjMMO6=G2
+R2
+!s105 DS1302_Controller_sv_unit
+S1
+R3
+w1653062435
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/DS1302_Controller.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/DS1302_Controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/DS1302_Controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/DS1302_Controller.sv|
+!i113 1
+R6
+R7
+n@d@s1302_@controller
+vSev_Seg_Display
+R0
+R1
+!i10b 1
+!s100 Y6IPcE2^Me<33N8AiDQ5G0
+Ij:;>Fkamm6fE:7;@;_bbM3
+R2
+!s105 Sev_Seg_Display_sv_unit
+S1
+R3
+w1652885693
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Sev_Seg_Display.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Sev_Seg_Display.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Sev_Seg_Display.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Sev_Seg_Display.sv|
+!i113 1
+R6
+R7
+n@sev_@seg_@display
+vTime_Setting
+R0
+R1
+!i10b 1
+!s100 kLCMb4]T4fl<fg^?iWW;<0
+I^eHFWT>k@=i>`_^zPaJFg1
+R2
+!s105 Time_Setting_sv_unit
+S1
+R3
+w1653114219
+8C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Time_Setting.sv
+FC:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Time_Setting.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1653215298.000000
+!s107 C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Time_Setting.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Time_Setting.sv|
+!i113 1
+R6
+R7
+n@time_@setting

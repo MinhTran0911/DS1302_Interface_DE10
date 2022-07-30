@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hr_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hr_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_in[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

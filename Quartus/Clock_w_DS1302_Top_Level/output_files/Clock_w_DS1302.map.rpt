@@ -1,0 +1,681 @@
+Analysis & Synthesis report for Clock_w_DS1302
+Wed May 25 19:50:07 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Clock_w_DS1302|DS1302_Controller:Controller|state
+  9. State Machine - |Clock_w_DS1302|Time_Setting:Time_Set|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2
+ 14. Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div1
+ 15. Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0
+ 16. Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2
+ 17. Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod1
+ 18. Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0
+ 19. Port Connectivity Checks: "Sev_Seg_Display:HEX_Disp"
+ 20. Port Connectivity Checks: "DS1302_Controller:Controller"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed May 25 19:50:07 2022       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Clock_w_DS1302                              ;
+; Top-level Entity Name           ; Clock_w_DS1302                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 77                                          ;
+; Total pins                      ; 83                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Clock_w_DS1302     ; Clock_w_DS1302     ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; DS1302_Controller.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/DS1302_Controller.sv       ;         ;
+; CLK_div_50.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/CLK_div_50.sv              ;         ;
+; Sev_Seg_Display.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv         ;         ;
+; Dec_2_BCD_Decoder.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv       ;         ;
+; Clock_w_DS1302.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv          ;         ;
+; Time_Setting.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Time_Setting.sv            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                                                                      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                                                                                                     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                                                 ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                                                                      ;         ;
+; db/lpm_divide_3am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_3am.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_ose.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/alt_u_div_ose.tdf       ;         ;
+; db/lpm_divide_2am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_2am.tdf      ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/sign_div_unsign_8kh.tdf ;         ;
+; db/alt_u_div_mse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/alt_u_div_mse.tdf       ;         ;
+; db/lpm_divide_62m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_62m.tdf      ;         ;
+; db/lpm_divide_52m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_52m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 163        ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 294        ;
+;     -- 7 input functions                    ; 5          ;
+;     -- 6 input functions                    ; 25         ;
+;     -- 5 input functions                    ; 27         ;
+;     -- 4 input functions                    ; 44         ;
+;     -- <=3 input functions                  ; 193        ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 77         ;
+;                                             ;            ;
+; I/O pins                                    ; 83         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; rstn~input ;
+; Maximum fan-out                             ; 58         ;
+; Total fan-out                               ; 1310       ;
+; Average fan-out                             ; 2.43       ;
++---------------------------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Clock_w_DS1302                           ; 294 (0)             ; 77 (0)                    ; 0                 ; 0          ; 83   ; 0            ; |Clock_w_DS1302                                                                                                                         ; Clock_w_DS1302      ; work         ;
+;    |CLK_div_50:CLK_divider_50|            ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|CLK_div_50:CLK_divider_50                                                                                               ; CLK_div_50          ; work         ;
+;    |DS1302_Controller:Controller|         ; 79 (79)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|DS1302_Controller:Controller                                                                                            ; DS1302_Controller   ; work         ;
+;    |Dec_2_BCD_Decoder:D2BCD|              ; 152 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD                                                                                                 ; Dec_2_BCD_Decoder   ; work         ;
+;       |lpm_divide:Div0|                   ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_2am:auto_generated|  ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0|lpm_divide_2am:auto_generated                                                   ; lpm_divide_2am      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
+;                |alt_u_div_mse:divider|    ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_mse:divider ; alt_u_div_mse       ; work         ;
+;       |lpm_divide:Div1|                   ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_3am:auto_generated|  ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div1|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div1|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div1|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Div2|                   ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_3am:auto_generated|  ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2|lpm_divide_3am:auto_generated                                                   ; lpm_divide_3am      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2|lpm_divide_3am:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod0|                   ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_52m:auto_generated|  ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0|lpm_divide_52m:auto_generated                                                   ; lpm_divide_52m      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0|lpm_divide_52m:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
+;                |alt_u_div_mse:divider|    ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0|lpm_divide_52m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_mse:divider ; alt_u_div_mse       ; work         ;
+;       |lpm_divide:Mod1|                   ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_62m:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod1|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod1|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod1|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;       |lpm_divide:Mod2|                   ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_62m:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_ose:divider|    ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
+;    |Sev_Seg_Display:HEX_Disp|             ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Sev_Seg_Display:HEX_Disp                                                                                                ; Sev_Seg_Display     ; work         ;
+;    |Time_Setting:Time_Set|                ; 19 (19)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock_w_DS1302|Time_Setting:Time_Set                                                                                                   ; Time_Setting        ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Clock_w_DS1302|DS1302_Controller:Controller|state                                                                                                                                                          ;
++----------------------+-----------------+-----------------+----------------+-----------------+----------------------+----------------+---------------------+---------------+---------------+--------------------+------------+
+; Name                 ; state.TERMINATE ; state.STO_BURST ; state.RD_BURST ; state.WR_SINGLE ; state.WR_SINGLE_PREP ; state.WR_BURST ; state.WR_BURST_PREP ; state.CNT_RST ; state.WR_ADDR ; state.WR_ADDR_PREP ; state.IDLE ;
++----------------------+-----------------+-----------------+----------------+-----------------+----------------------+----------------+---------------------+---------------+---------------+--------------------+------------+
+; state.IDLE           ; 0               ; 0               ; 0              ; 0               ; 0                    ; 0              ; 0                   ; 0             ; 0             ; 0                  ; 0          ;
+; state.WR_ADDR_PREP   ; 0               ; 0               ; 0              ; 0               ; 0                    ; 0              ; 0                   ; 0             ; 0             ; 1                  ; 1          ;
+; state.WR_ADDR        ; 0               ; 0               ; 0              ; 0               ; 0                    ; 0              ; 0                   ; 0             ; 1             ; 0                  ; 1          ;
+; state.CNT_RST        ; 0               ; 0               ; 0              ; 0               ; 0                    ; 0              ; 0                   ; 1             ; 0             ; 0                  ; 1          ;
+; state.WR_BURST_PREP  ; 0               ; 0               ; 0              ; 0               ; 0                    ; 0              ; 1                   ; 0             ; 0             ; 0                  ; 1          ;
+; state.WR_BURST       ; 0               ; 0               ; 0              ; 0               ; 0                    ; 1              ; 0                   ; 0             ; 0             ; 0                  ; 1          ;
+; state.WR_SINGLE_PREP ; 0               ; 0               ; 0              ; 0               ; 1                    ; 0              ; 0                   ; 0             ; 0             ; 0                  ; 1          ;
+; state.WR_SINGLE      ; 0               ; 0               ; 0              ; 1               ; 0                    ; 0              ; 0                   ; 0             ; 0             ; 0                  ; 1          ;
+; state.RD_BURST       ; 0               ; 0               ; 1              ; 0               ; 0                    ; 0              ; 0                   ; 0             ; 0             ; 0                  ; 1          ;
+; state.STO_BURST      ; 0               ; 1               ; 0              ; 0               ; 0                    ; 0              ; 0                   ; 0             ; 0             ; 0                  ; 1          ;
+; state.TERMINATE      ; 1               ; 0               ; 0              ; 0               ; 0                    ; 0              ; 0                   ; 0             ; 0             ; 0                  ; 1          ;
++----------------------+-----------------+-----------------+----------------+-----------------+----------------------+----------------+---------------------+---------------+---------------+--------------------+------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------+
+; State Machine - |Clock_w_DS1302|Time_Setting:Time_Set|state               ;
++---------------+--------------+---------------+---------------+------------+
+; Name          ; state.SET_HR ; state.SET_SEC ; state.SET_MIN ; state.IDLE ;
++---------------+--------------+---------------+---------------+------------+
+; state.IDLE    ; 0            ; 0             ; 0             ; 0          ;
+; state.SET_MIN ; 0            ; 0             ; 1             ; 1          ;
+; state.SET_SEC ; 0            ; 1             ; 0             ; 1          ;
+; state.SET_HR  ; 1            ; 0             ; 0             ; 1          ;
++---------------+--------------+---------------+---------------+------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++----------------------------------------+--------------------------------------------------+
+; Register name                          ; Reason for Removal                               ;
++----------------------------------------+--------------------------------------------------+
+; DS1302_Controller:Controller|addr[5]   ; Merged with DS1302_Controller:Controller|addr[4] ;
+; DS1302_Controller:Controller|addr[2,3] ; Merged with DS1302_Controller:Controller|addr[1] ;
+; DS1302_Controller:Controller|addr[6]   ; Stuck at GND due to stuck port data_in           ;
+; DS1302_Controller:Controller|addr[7]   ; Stuck at VCC due to stuck port data_in           ;
+; DS1302_Controller:Controller|state~2   ; Lost fanout                                      ;
+; DS1302_Controller:Controller|state~3   ; Lost fanout                                      ;
+; DS1302_Controller:Controller|state~4   ; Lost fanout                                      ;
+; DS1302_Controller:Controller|state~5   ; Lost fanout                                      ;
+; Time_Setting:Time_Set|state~2          ; Lost fanout                                      ;
+; Time_Setting:Time_Set|state~3          ; Lost fanout                                      ;
+; Total Number of Removed Registers = 11 ;                                                  ;
++----------------------------------------+--------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 77    ;
+; Number of registers using Synchronous Clear  ; 37    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Clock_w_DS1302|Time_Setting:Time_Set|min[0]          ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Clock_w_DS1302|Time_Setting:Time_Set|sec[5]          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Clock_w_DS1302|Time_Setting:Time_Set|hr[4]           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Clock_w_DS1302|DS1302_Controller:Controller|addr[4]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Clock_w_DS1302|DS1302_Controller:Controller|addr[1]  ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |Clock_w_DS1302|DS1302_Controller:Controller|count[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Clock_w_DS1302|Time_Setting:Time_Set|state           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_3am ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_3am ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_2am ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_62m ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_52m ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "Sev_Seg_Display:HEX_Disp" ;
++----------+-------+----------+------------------------+
+; Port     ; Type  ; Severity ; Details                ;
++----------+-------+----------+------------------------+
+; hr[7..6] ; Input ; Info     ; Stuck at GND           ;
+; min[7]   ; Input ; Info     ; Stuck at GND           ;
+; sec[7]   ; Input ; Info     ; Stuck at GND           ;
++----------+-------+----------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DS1302_Controller:Controller"                                                                   ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; time_out[63..22] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; time_out[15]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; time_out[7]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 77                          ;
+;     ENA               ; 24                          ;
+;     ENA SCLR          ; 7                           ;
+;     SCLR              ; 30                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 15                          ;
+; arriav_io_obuf        ; 1                           ;
+; arriav_lcell_comb     ; 299                         ;
+;     arith             ; 77                          ;
+;         0 data inputs ; 20                          ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 4                           ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 187                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 40                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 25                          ;
+;     shared            ; 30                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 24                          ;
+; boundary_port         ; 83                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.10                        ;
+; Average LUT depth     ; 4.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed May 25 19:49:53 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Clock_w_DS1302 -c Clock_w_DS1302
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ds1302_controller.sv
+    Info (12023): Found entity 1: DS1302_Controller File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/DS1302_Controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clk_div_50.sv
+    Info (12023): Found entity 1: CLK_div_50 File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/CLK_div_50.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sev_seg_display.sv
+    Info (12023): Found entity 1: Sev_Seg_Display File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dec_2_bcd_decoder.sv
+    Info (12023): Found entity 1: Dec_2_BCD_Decoder File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_w_ds1302.sv
+    Info (12023): Found entity 1: Clock_w_DS1302 File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file time_setting.sv
+    Info (12023): Found entity 1: Time_Setting File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Time_Setting.sv Line: 1
+Info (12127): Elaborating entity "Clock_w_DS1302" for the top level hierarchy
+Info (12128): Elaborating entity "Time_Setting" for hierarchy "Time_Setting:Time_Set" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at Time_Setting.sv(27): truncated value with size 6 to match size of target (5) File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Time_Setting.sv Line: 27
+Info (12128): Elaborating entity "CLK_div_50" for hierarchy "CLK_div_50:CLK_divider_50" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 32
+Info (12128): Elaborating entity "Dec_2_BCD_Decoder" for hierarchy "Dec_2_BCD_Decoder:D2BCD" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at Dec_2_BCD_Decoder.sv(9): truncated value with size 32 to match size of target (8) File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at Dec_2_BCD_Decoder.sv(10): truncated value with size 32 to match size of target (8) File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at Dec_2_BCD_Decoder.sv(11): truncated value with size 32 to match size of target (8) File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+Info (12128): Elaborating entity "DS1302_Controller" for hierarchy "DS1302_Controller:Controller" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 53
+Info (12128): Elaborating entity "Sev_Seg_Display" for hierarchy "Sev_Seg_Display:HEX_Disp" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 64
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(27): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 27
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(28): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 28
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(29): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 29
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(30): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 30
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(31): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 31
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(32): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 32
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(65): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 65
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(66): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 66
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(99): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 99
+Warning (10199): Verilog HDL Case Statement warning at Sev_Seg_Display.sv(100): case item expression never matches the case expression File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Sev_Seg_Display.sv Line: 100
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Dec_2_BCD_Decoder:D2BCD|Div2" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Dec_2_BCD_Decoder:D2BCD|Div1" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 10
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Dec_2_BCD_Decoder:D2BCD|Div0" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Dec_2_BCD_Decoder:D2BCD|Mod2" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Dec_2_BCD_Decoder:D2BCD|Mod1" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 10
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Dec_2_BCD_Decoder:D2BCD|Mod0" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+Info (12130): Elaborated megafunction instantiation "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+Info (12133): Instantiated megafunction "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div2" with the following parameter: File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3am.tdf
+    Info (12023): Found entity 1: lpm_divide_3am File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_3am.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/sign_div_unsign_9kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
+    Info (12023): Found entity 1: alt_u_div_ose File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/alt_u_div_ose.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+Info (12133): Instantiated megafunction "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Div0" with the following parameter: File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2am.tdf
+    Info (12023): Found entity 1: lpm_divide_2am File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_2am.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/sign_div_unsign_8kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mse.tdf
+    Info (12023): Found entity 1: alt_u_div_mse File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/alt_u_div_mse.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+Info (12133): Instantiated megafunction "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod2" with the following parameter: File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
+    Info (12023): Found entity 1: lpm_divide_62m File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_62m.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0" File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+Info (12133): Instantiated megafunction "Dec_2_BCD_Decoder:D2BCD|lpm_divide:Mod0" with the following parameter: File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Dec_2_BCD_Decoder.sv Line: 9
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_52m.tdf
+    Info (12023): Found entity 1: lpm_divide_52m File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/db/lpm_divide_52m.tdf Line: 24
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX[5][1]" is stuck at GND File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 1
+    Warning (13410): Pin "hr_out[6]" is stuck at GND File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 10
+    Warning (13410): Pin "hr_out[7]" is stuck at GND File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 10
+    Warning (13410): Pin "min_out[7]" is stuck at GND File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 10
+    Warning (13410): Pin "sec_out[7]" is stuck at GND File: C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/Clock_w_DS1302.sv Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/output_files/Clock_w_DS1302.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 394 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 71 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 311 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Wed May 25 19:50:07 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Thinh Nguyen/OneDrive - RMIT University/EEET2475_s3818343_s3804791_Assignment/Quartus_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level/output_files/Clock_w_DS1302.map.smsg.
+
+

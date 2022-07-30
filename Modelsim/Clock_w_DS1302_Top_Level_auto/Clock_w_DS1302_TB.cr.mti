@@ -1,0 +1,50 @@
+{C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Clock_w_DS1302_tb
+
+Top level modules:
+	Clock_w_DS1302_tb
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/CLK_div_50.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/CLK_div_50.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CLK_div_50
+
+Top level modules:
+	CLK_div_50
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/DS1302_Controller.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/DS1302_Controller.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DS1302_Controller
+
+Top level modules:
+	DS1302_Controller
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Time_Setting.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Time_Setting.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Time_Setting
+
+Top level modules:
+	Time_Setting
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Sev_Seg_Display.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Sev_Seg_Display.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Sev_Seg_Display
+
+Top level modules:
+	Sev_Seg_Display
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Dec_2_BCD_Decoder.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Dec_2_BCD_Decoder.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Dec_2_BCD_Decoder
+
+Top level modules:
+	Dec_2_BCD_Decoder
+
+} {} {}} {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Clock_w_DS1302
+
+Top level modules:
+	Clock_w_DS1302
+
+} {} {}}

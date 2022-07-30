@@ -1,0 +1,192 @@
+module DS1302_Controller (clk1, rstn, rd_btn, wr_btn, hr, min, sec, time_out, CE, SCLK, IO, in_progress);
+	
+	localparam BURST_RD_ADDR = 8'hBF;
+	localparam BURST_WR_ADDR = 8'hBE;
+	localparam WR_CTRL_REG_ADDR = 8'h8E;
+	localparam WR_SEC_REG_ADDR = 8'h80;
+	
+	input logic clk1, rstn, rd_btn, wr_btn;
+	input logic [7:0] hr, min, sec;
+	
+	output logic CE, SCLK;
+	output logic [63:0] time_out;
+	output logic in_progress;
+	
+	inout logic IO;
+	
+	
+	logic prev_rd_btn, prev_wr_btn;
+	logic [3:0] state;
+	logic [6:0] count; 
+	logic [63:0] burst_data;
+	
+	logic io_dir, io;
+	logic [7:0] addr;
+	
+	logic CH_init, WP_init;
+	
+	typedef enum {INIT, IDLE, WR_ADDR_PREP, WR_ADDR, CNT_RST, WR_BURST_PREP, WR_BURST, WR_SINGLE_PREP, WR_SINGLE, RD_BURST, STO_BURST, TERMINATE, OUT} States;
+	
+	assign burst_data = {8'b0, 8'b0, 8'b0, 8'b0, 8'b0, hr, min, sec};
+	
+	assign IO = io_dir ? io : 1'bz;
+	
+	// Detect Read button falling edge
+	always_ff @(posedge clk1) begin
+		if (rd_btn) prev_rd_btn <= 1;
+		else if (prev_rd_btn) begin
+			prev_rd_btn <= 0;
+		end
+	end // end always_ff
+	
+	// Detect Write button falling edge
+	always_ff @(posedge clk1) begin
+		if (wr_btn) prev_wr_btn <= 1;
+		else if (prev_wr_btn) begin
+			prev_wr_btn <= 0;
+		end
+	end // end always_ff
+	
+					  
+	always_ff @(posedge clk1) begin
+		if (!rstn) begin
+			count <= 0;
+			state <= IDLE;
+			CE <= 0;
+			SCLK <= 0;
+			io_dir <= 1;
+			io <= 0;
+			time_out <= 64'd0;
+			WP_init <= 0;
+			CH_init <= 0;
+		end // end if (!rstn)
+		
+		else begin
+			case (state)
+				IDLE:
+					begin
+						CE <= 0;
+						SCLK <= 0;
+						count <= 0;
+						io_dir <= 1;
+						
+						if (!WP_init) begin
+							addr <= WR_CTRL_REG_ADDR;
+							state <= WR_ADDR_PREP;
+						end // end if (!WP_init)
+						else if (!CH_init) begin
+							addr <= WR_SEC_REG_ADDR;
+							state <= WR_ADDR_PREP;
+						end // end if (!CH_init)
+						else if (!wr_btn && prev_wr_btn) begin
+							addr <= BURST_WR_ADDR;
+							state <= WR_ADDR_PREP;
+						end // end if (!wr_btn && prev_wr_btn)
+						else if (!rd_btn && prev_rd_btn) begin
+							addr <= BURST_RD_ADDR;
+							state <= WR_ADDR_PREP;
+						end // end if (!rd_btn && prev_rd_btn)
+						else state <= IDLE;
+					end // end IDLE state
+					
+				WR_ADDR_PREP:
+					begin
+						CE <= 1;
+						SCLK <= 0;
+						io_dir <= 1;
+						io <= addr[count];
+						in_progress <= 1;
+						state <= WR_ADDR;
+					end // end WR_ADDR_PREP state
+					
+				WR_ADDR:
+					begin
+						SCLK <= 1;
+						count <= count + 7'd1;
+						
+						if (count == 7'd7) state <= CNT_RST;
+						else state <= WR_ADDR_PREP;
+					end // end WR_ADDR state
+					
+				CNT_RST:
+					begin
+						count <= 0;
+						
+						if (addr == WR_CTRL_REG_ADDR) state <= WR_SINGLE_PREP;
+						else if (addr == WR_SEC_REG_ADDR) state <= WR_SINGLE_PREP;
+						else if (addr == BURST_RD_ADDR) begin
+							state <= RD_BURST;
+							io_dir <= 0;
+						end // end if (addr == BURST_RD_ADDR)
+						else if (addr == BURST_WR_ADDR) state <= WR_BURST_PREP;
+						else state <= IDLE;
+					end // end CNT_RST state
+					
+				WR_SINGLE_PREP:
+					begin
+						SCLK <= 0;
+						io <= 0;
+						
+						state <= WR_SINGLE;
+					end // end WR_SINGLE_PREP state
+					
+				WR_SINGLE:
+					begin
+						SCLK <= 1;
+						count <= count + 7'd1;
+						
+						if (count == 7'd7) state <= TERMINATE;
+						else state <= WR_SINGLE_PREP;
+					end // end WR_SINGLE state
+					
+				WR_BURST_PREP:
+					begin
+						SCLK <= 0;
+						io <= burst_data[count];
+						
+						state <= WR_BURST;
+					end // end WR_BURST_PREP state
+					
+				WR_BURST:
+					begin
+						SCLK <= 1;
+						count <= count + 7'd1;
+						
+						if (count == 7'd63) state <= TERMINATE;
+						else state <= WR_BURST_PREP;
+					end // end WR_BURST state
+					
+				RD_BURST:
+					begin
+						SCLK <= 0;
+						
+						state <= STO_BURST;
+					end // end RD_BURST state
+					
+				STO_BURST:
+					begin
+						SCLK <= 1;
+						time_out[count] <= IO;
+						count <= count + 7'd1;
+						
+						if (count == 7'd63) state <= TERMINATE;
+						else state <= RD_BURST; // end STO_BURST state
+					end
+				
+				TERMINATE:
+					begin
+						CE <= 0;
+						SCLK <= 0;
+						count <= 0;
+						if (addr == WR_CTRL_REG_ADDR) WP_init <= 1;
+						if (addr == WR_SEC_REG_ADDR) CH_init <= 1;
+						in_progress <= 0;
+						state <= IDLE;
+					end // end TERMINATE state
+				
+			endcase
+		end // end else (!rstn)
+	end // end always_ff
+	
+endmodule 
+	

@@ -1,0 +1,14 @@
+
+State Machine - |DS1302_Controller|state
+Name state.TERMINATE state.STO_BURST state.RD_BURST state.WR_SINGLE state.WR_SINGLE_PREP state.WR_BURST state.WR_BURST_PREP state.CNT_RST state.WR_ADDR state.WR_ADDR_PREP state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.WR_ADDR_PREP 0 0 0 0 0 0 0 0 0 1 1 
+state.WR_ADDR 0 0 0 0 0 0 0 0 1 0 1 
+state.CNT_RST 0 0 0 0 0 0 0 1 0 0 1 
+state.WR_BURST_PREP 0 0 0 0 0 0 1 0 0 0 1 
+state.WR_BURST 0 0 0 0 0 1 0 0 0 0 1 
+state.WR_SINGLE_PREP 0 0 0 0 1 0 0 0 0 0 1 
+state.WR_SINGLE 0 0 0 1 0 0 0 0 0 0 1 
+state.RD_BURST 0 0 1 0 0 0 0 0 0 0 1 
+state.STO_BURST 0 1 0 0 0 0 0 0 0 0 1 
+state.TERMINATE 1 0 0 0 0 0 0 0 0 0 1 

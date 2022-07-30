@@ -1,0 +1,1416 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile {C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_TB.mpf}
+# Loading project Clock_w_DS1302_TB
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 08:59:20 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+run
+# At 3130 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 0
+# At 4690 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 1
+# At 4690 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 1
+# At 6250 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 2
+# At 7810 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 3
+# At 9370 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 4
+# At 10930 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 5
+# At 15610 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 8
+# At 17170 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 9
+# At 21850 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 12
+# At 21850 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 12
+# At 23410 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 13
+# At 24970 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 14
+# At 24970 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 14
+# At 26530 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 15
+# At 26530 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 15
+# At 28090 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 16
+# At 28090 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 16
+# At 29650 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 17
+# At 34330 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 20
+# At 35890 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 21
+# At 40570 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 24
+# At 40570 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 24
+# At 42130 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 25
+# At 46810 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 28
+# At 48370 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 29
+# At 53050 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 32
+# At 54610 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0, i = 33
+# At 54610 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 33
+# At 56170 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0, i = 34
+# At 56170 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 34
+# At 57730 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 35
+# At 59290 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 36
+# At 62410 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 38
+# At 63970 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 39
+# At 68650 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 42
+# At 70210 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 43
+# At 74890 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 46
+# At 76450 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 47
+# At 78010 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 48
+# At 78010 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 48
+# At 79570 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 49
+# At 79570 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 49
+# At 81130 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 50
+# At 81130 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 50
+# At 81130 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 50
+# At 82690 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 51
+# At 82690 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 51
+# At 82690 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 51
+# At 84250 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 52
+# At 85810 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 53
+# At 85810 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 53
+# At 87370 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 54
+# At 88930 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 55
+# At 88930 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 55
+# At 90490 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 56
+# At 92050 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 57
+# At 92050 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 57
+# At 93610 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 58
+# At 95170 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 59
+# At 95170 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 59
+# At 96730 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 60
+# At 98290 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 61
+# At 98290 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 61
+# At 99850 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 62
+# At 101410 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 63
+# At 101410 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 63
+# At 102970 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 64
+# At 104530 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 65
+# At 104530 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 65
+# At 106090 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 66
+# At 107650 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 67
+# At 107650 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 67
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 11:19:24 on May 22,2022, Elapsed time: 2:20:04
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 11:19:24 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+run
+# At 2870 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 1
+# At 3910 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 2
+# At 4950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 3
+# At 4950 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 3
+# At 5990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 4
+# At 7030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 5
+# At 8070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 6
+# At 9110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 7
+# At 10150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 8
+# At 11190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 9
+# At 11190 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 9
+# At 12230 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 10
+# At 13270 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 11
+# At 14310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 12
+# At 15350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 13
+# At 16390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 14
+# At 17430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 15
+# At 17430 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 15
+# At 18470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 16
+# At 20550 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 18
+# At 20550 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 18
+# At 21590 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 19
+# At 22630 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 20
+# At 23670 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 21
+# At 24710 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 22
+# At 25750 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 23
+# At 26790 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 24
+# At 27830 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 25
+# At 28870 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 26
+# At 29910 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 27
+# At 30950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 28
+# At 31990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 29
+# At 33030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 30
+# At 34070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 31
+# At 35110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 32
+# At 36150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 33
+# At 37190 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0, i = 34
+# At 37190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 34
+# At 39270 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 36
+# At 40310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 37
+# At 41350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 38
+# At 42390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 39
+# At 43430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 40
+# At 44470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 41
+# At 45510 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 42
+# At 46550 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 43
+# At 47590 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 44
+# At 48630 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 45
+# At 49670 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 46
+# At 50710 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 47
+# At 51750 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 48
+# At 52790 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 49
+# At 53830 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 50
+# At 53830 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 50
+# At 54870 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 51
+# At 56950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 53
+# At 56950 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 53
+# At 57990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 54
+# At 59030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 55
+# At 60070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 56
+# At 61110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 57
+# At 62150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 58
+# At 63190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 59
+# At 64230 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 60
+# At 65270 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 61
+# At 66310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 62
+# At 67350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 63
+# At 68390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 64
+# At 69430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 65
+# At 70470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 66
+# At 71510 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 67
+# At 72550 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 68
+# At 73590 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0, i = 69
+# At 73590 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 69
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 11:24:09 on May 22,2022, Elapsed time: 0:04:45
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 11:24:09 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+run
+# At 2870 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 1
+# At 3910 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 2
+# At 4950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 3
+# At 4950 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 3
+# At 5990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 4
+# At 7030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 5
+# At 8070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 6
+# At 9110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 7
+# At 10150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 8
+# At 11190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 9
+# At 11190 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 9
+# At 12230 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 10
+# At 13270 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 11
+# At 14310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 12
+# At 15350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 13
+# At 16390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 14
+# At 17430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 15
+# At 17430 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 15
+# At 18470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 16
+# At 20550 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 18
+# At 20550 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 18
+# At 21590 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 19
+# At 22630 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 20
+# At 23670 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 21
+# At 24710 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 22
+# At 25750 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 23
+# At 26790 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 24
+# At 27830 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 25
+# At 28870 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 26
+# At 29910 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 27
+# At 30950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 28
+# At 31990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 29
+# At 33030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 30
+# At 34070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 31
+# At 35110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 32
+# At 36150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 33
+# At 37190 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0, i = 34
+# At 37190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 34
+# At 39270 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1, i = 36
+# At 40310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 37
+# At 41350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 38
+# At 42390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 39
+# At 43430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 40
+# At 44470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 41
+# At 45510 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 42
+# At 46550 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 43
+# At 47590 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 44
+# At 48630 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 45
+# At 49670 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 46
+# At 50710 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 47
+# At 51750 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 48
+# At 52790 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 49
+# At 53830 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 50
+# At 53830 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1, i = 50
+# At 54870 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 51
+# At 56950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 53
+# At 56950 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0, i = 53
+# At 57990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 54
+# At 59030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 55
+# At 60070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 56
+# At 61110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 57
+# At 62150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 58
+# At 63190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 59
+# At 64230 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 60
+# At 65270 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 61
+# At 66310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 62
+# At 67350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 63
+# At 68390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 64
+# At 69430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 65
+# At 70470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 66
+# At 71510 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 67
+# At 72550 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1, i = 68
+# At 73590 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0, i = 69
+# At 73590 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0, i = 69
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 11:30:17 on May 22,2022, Elapsed time: 0:06:08
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 11:30:17 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+.main clear
+run
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv failed with 1 errors.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 11:52:41 on May 22,2022, Elapsed time: 0:22:24
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 11:52:41 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/set_btn \
+sim:/Clock_w_DS1302_tb/hr_en \
+sim:/Clock_w_DS1302_tb/min_en \
+sim:/Clock_w_DS1302_tb/sec_en
+run
+# At 77995 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 77995 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 77995 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78015 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78015 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78015 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78035 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78035 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78035 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78055 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78055 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78055 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78075 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78075 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78075 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78095 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78095 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78095 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78115 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78115 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78115 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78135 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78135 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78135 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78155 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78155 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78155 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78175 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78175 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78175 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78195 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78195 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78195 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78215 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78215 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78215 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78235 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78235 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78235 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78255 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78255 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78255 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78275 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78275 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78275 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78295 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78295 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78295 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+# At 78315 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = x
+# At 78315 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = x
+# At 78315 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = x
+restart
+run
+# ** Warning: (vsim-PLI-3406) Too many digits (6) in data on line 1 of file "in_ext_input.txt". (Max is 1.)    : C:/Users/Minh/OneDrive - RMIT University/Advanced_Digital_Design_1_2022A/EEET2475_s3818343_s3804791_Assignment/Modelsim_Projects/Clock_w_DS1302/Clock_w_DS1302_Top_Level_auto/Clock_w_DS1302_tb.sv(118)
+#    Time: 0 ps  Iteration: 0  Instance: /Clock_w_DS1302_tb
+# At 77995 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = 0
+# At 78095 ns
+# ERROR: Output 'hr_en' = 0 and Expected Output 'hr_en' = 1
+# At 78095 ns
+# ERROR: Output 'min_en' = 1 and Expected Output 'min_en' = 0
+# At 78195 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = 1
+# At 78195 ns
+# ERROR: Output 'sec_en' = 1 and Expected Output 'sec_en' = 0
+# At 78295 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = 1
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 11:56:13 on May 22,2022, Elapsed time: 0:03:32
+# Errors: 0, Warnings: 1
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 11:56:13 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/set_btn \
+sim:/Clock_w_DS1302_tb/hr_en \
+sim:/Clock_w_DS1302_tb/min_en \
+sim:/Clock_w_DS1302_tb/sec_en
+run
+# At 77995 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = 0
+# At 78095 ns
+# ERROR: Output 'hr_en' = 0 and Expected Output 'hr_en' = 1
+# At 78095 ns
+# ERROR: Output 'min_en' = 1 and Expected Output 'min_en' = 0
+# At 78195 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = 1
+# At 78195 ns
+# ERROR: Output 'sec_en' = 1 and Expected Output 'sec_en' = 0
+# At 78295 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = 1
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 11:58:42 on May 22,2022, Elapsed time: 0:02:29
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 11:58:42 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/rstn \
+sim:/Clock_w_DS1302_tb/set_btn \
+sim:/Clock_w_DS1302_tb/hr_en \
+sim:/Clock_w_DS1302_tb/min_en \
+sim:/Clock_w_DS1302_tb/sec_en
+run
+# At 77995 ns
+# ERROR: Output 'hr_en' = 1 and Expected Output 'hr_en' = 0
+# At 78095 ns
+# ERROR: Output 'hr_en' = 0 and Expected Output 'hr_en' = 1
+# At 78095 ns
+# ERROR: Output 'min_en' = 1 and Expected Output 'min_en' = 0
+# At 78195 ns
+# ERROR: Output 'min_en' = 0 and Expected Output 'min_en' = 1
+# At 78195 ns
+# ERROR: Output 'sec_en' = 1 and Expected Output 'sec_en' = 0
+# At 78295 ns
+# ERROR: Output 'sec_en' = 0 and Expected Output 'sec_en' = 1
+restart
+run
+.main
+# wrong # args: should be ". option ?arg arg ...?"
+.main clear
+restart
+run
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk1
+restart
+run
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv failed with 1 errors.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 12:34:21 on May 22,2022, Elapsed time: 0:35:39
+# Errors: 1, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 12:34:21 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/wr_btn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+.main clear
+run
+# At 83470 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1
+# At 84510 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1
+# At 84510 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 85550 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 86590 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 95950 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 96990 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 98030 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 99070 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 100110 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 101150 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 103230 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 104270 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 105310 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 106350 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 107390 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 108430 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 109470 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 110510 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 111550 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 112590 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 117790 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 118830 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 119870 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 120910 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 121950 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 122990 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 124030 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 125070 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 130270 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 131310 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 132350 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 133390 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 140670 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 141710 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 142750 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 143790 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 234270 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 12:36:02 on May 22,2022, Elapsed time: 0:01:41
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 12:36:02 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/wr_btn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+.main clear
+run
+# At 83990 ns
+# ERROR: Output 'CE' = 0 and Expected Output 'CE' = 1
+# At 85030 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 86070 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 86070 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 87110 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 88150 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 89190 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 90230 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 91270 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 92310 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 93350 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 94390 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 95430 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 96470 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 96470 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 97510 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 98550 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 98550 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 99590 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 101670 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 102710 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 103750 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 103750 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 104790 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 105830 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 105830 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 106870 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 107910 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 107910 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 108950 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 109990 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 109990 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 111030 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 112070 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 112070 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 113110 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 114150 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 115190 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 116230 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 117270 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 118310 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 118310 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 119350 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 120390 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 120390 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 121430 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 122470 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 122470 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 123510 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 124550 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 124550 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 125590 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 126630 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 127670 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 128710 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 129750 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 130790 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 130790 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 131830 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 132870 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 132870 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 133910 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 134950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 135990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 137030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 138070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 139110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 140150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 141190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 141190 ns
+# ERROR: Output 'IO' = 0 and Expected Output 'IO' = 1
+# At 142230 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 143270 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 143270 ns
+# ERROR: Output 'IO' = 1 and Expected Output 'IO' = 0
+# At 144310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 145350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 146390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 147430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 148470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 149510 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 150550 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 151590 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 152630 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 153670 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 154710 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 155750 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 156790 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 157830 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 158870 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 159910 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 160950 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 161990 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 163030 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 164070 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 165110 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 166150 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 167190 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 168230 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 169270 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 170310 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 171350 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 172390 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 173430 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 174470 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 175510 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 176550 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 177590 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 178630 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 179670 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 180710 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 181750 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 182790 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 183830 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 184870 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 185910 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 186950 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 187990 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 189030 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 190070 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 191110 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 192150 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 193190 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 194230 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 195270 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 196310 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 197350 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 198390 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 199430 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 200470 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 201510 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 202550 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 203590 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 204630 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 205670 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 206710 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 207750 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 208790 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 209830 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 210870 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 211910 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 212950 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 213990 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 215030 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 216070 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 217110 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 218150 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 219190 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 220230 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 221270 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 222310 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 223350 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 224390 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 225430 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 226470 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 227510 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 228550 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 229590 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 230630 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 231670 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 232710 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# At 233750 ns
+# ERROR: Output 'SCLK' = 0 and Expected Output 'SCLK' = 1
+# At 234790 ns
+# ERROR: Output 'CE' = 1 and Expected Output 'CE' = 0
+# At 234790 ns
+# ERROR: Output 'SCLK' = 1 and Expected Output 'SCLK' = 0
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 12:39:09 on May 22,2022, Elapsed time: 0:03:07
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 12:39:09 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/wr_btn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+.main clear
+run
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 12:42:53 on May 22,2022, Elapsed time: 0:03:44
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 12:42:53 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/wr_btn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO
+run
+run
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.Clock_w_DS1302_tb
+# End time: 13:08:27 on May 22,2022, Elapsed time: 0:25:34
+# Errors: 0, Warnings: 0
+# vsim -gui work.Clock_w_DS1302_tb 
+# Start time: 13:08:27 on May 22,2022
+# Loading sv_std.std
+# Loading work.Clock_w_DS1302_tb
+# Loading work.Clock_w_DS1302
+# Loading work.Time_Setting
+# Loading work.CLK_div_50
+# Loading work.Dec_2_BCD_Decoder
+# Loading work.DS1302_Controller
+# Loading work.Sev_Seg_Display
+run
+restart
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/rd_btn \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/hr_en \
+sim:/Clock_w_DS1302_tb/min_en \
+sim:/Clock_w_DS1302_tb/sec_en \
+sim:/Clock_w_DS1302_tb/IO
+run
+run
+run
+run
+run
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv failed with 3 errors.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 1 failed with 3 errors.
+# Compile of Time_Setting.sv was successful.
+# Compile of CLK_div_50.sv was successful.
+# Compile of Clock_w_DS1302.sv was successful.
+# Compile of Clock_w_DS1302_tb.sv was successful.
+# Compile of Dec_2_BCD_Decoder.sv was successful.
+# Compile of DS1302_Controller.sv was successful.
+# Compile of Sev_Seg_Display.sv was successful.
+# 7 compiles, 0 failed with no errors.
+add wave -position insertpoint  \
+sim:/Clock_w_DS1302_tb/clk50 \
+sim:/Clock_w_DS1302_tb/clk1 \
+sim:/Clock_w_DS1302_tb/CE \
+sim:/Clock_w_DS1302_tb/SCLK \
+sim:/Clock_w_DS1302_tb/IO \
+sim:/Clock_w_DS1302_tb/hr_out \
+sim:/Clock_w_DS1302_tb/min_out \
+sim:/Clock_w_DS1302_tb/sec_out
+# Trace back: 
+#   >13:proc:14: ::SimDataset::objectTreeView16 value {WsEcoG 0} 0
+#   <12:proc:-1: ::ObjectsTreeView::GetObjectValue .main_pane.objects {WsEcoG 0} {reset_clk leaf icon_vlog_sig Register {} {} Internal {} {} {} {} {}}
+#   <11:eval:1: ::update idletasks
+#   >10:eval:1: ::.dockbar redoPack
+#   >9:proc:14: ::.dockbar remove wave_expand_time
+#   <8:proc:63: ::Wave::removeToolbars 
+#   <7:proc:17: ::Wave::WaveUnDock .main_pane.wave
+#   >6:proc:-1: ::.main_pane.wave _UnDock
+#   >5:proc:12: ::.windowmgr ShowWindow .main_pane.wave
+#   >4:eval:1: ::.windowmgr ShowWindowType wave
+#   <3:proc:77: ::view wave
+#   <2:proc:-1: ::findWindowFast wave {-position insertpoint sim:/Clock_w_DS1302_tb/clk50 sim:/Clock_w_DS1302_tb/clk1 sim:/Clock_w_DS1302_tb/CE sim:/Clock_w_DS1302_tb/SCLK sim:/Clock_w_DS1302_tb/IO sim:/Clock_w_DS1302_tb/hr_out sim:/Clock_w_DS1302_tb/min_out sim:/Clock_w_DS1302_tb/sec_out}
+#   <1:proc:3: ::add::wave -position insertpoint sim:/Clock_w_DS1302_tb/clk50 sim:/Clock_w_DS1302_tb/clk1 sim:/Clock_w_DS1302_tb/CE sim:/Clock_w_DS1302_tb/SCLK sim:/Clock_w_DS1302_tb/IO sim:/Clock_w_DS1302_tb/hr_out sim:/Clock_w_DS1302_tb/min_out sim:/Clock_w_DS1302_tb/sec_out
+# End time: 16:30:24 on May 22,2022, Elapsed time: 3:21:57
+# Errors: 28, Warnings: 0
